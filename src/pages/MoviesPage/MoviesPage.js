@@ -5,7 +5,7 @@ import { Box, makeStyles } from "@material-ui/core";
 import clsx from "clsx";
 
 import { moviesFetchData } from "../../redux/actions/movies";
-import { setLocalSearchQueue } from "../../utils";
+import { setSearchQueue } from "../../utils";
 import MovieCard from "../../shared/MovieCard";
 import SearchInput from "../../shared/SearchInput";
 
@@ -56,7 +56,7 @@ const MoviesPage = ({ fetchData, movies, moviesHasLoaded }) => {
     event.preventDefault();
     if (searchTerm.length > 0) {
       fetchMovies(searchTerm)
-      setLocalSearchQueue("searchQueue", searchTerm)
+      setSearchQueue("searchQueue", searchTerm)
     }
   };
 

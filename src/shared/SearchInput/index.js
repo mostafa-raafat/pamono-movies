@@ -4,7 +4,7 @@ import { makeStyles, TextField, Fab, CircularProgress } from "@material-ui/core"
 import SearchIcon from "@material-ui/icons/Search";
 import { Autocomplete } from "@material-ui/lab";
 
-import { getLocalSearchQueue } from "../../utils";
+import { getSearchQueue } from "../../utils";
 import { connect } from "react-redux";
 
 const useStyles = makeStyles(theme => ({
@@ -52,7 +52,7 @@ const SearchInput = ({ searchTerm, moviesAreLoading, handleChange, handleSubmit 
         fullWidth
         onChange={handleChange}
         freeSolo
-        options={getLocalSearchQueue("searchQueue").map((item) => item)}
+        options={getSearchQueue("searchQueue").map((item) => item)}
         renderInput={(params) => (
           <TextField
             {...params}

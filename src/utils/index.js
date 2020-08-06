@@ -33,7 +33,7 @@ export const getSearchQueue = (key) => {
  * @param {String} value 
  */
 export const setSearchQueue = (key, value) => {
-  let searchQueue = getLocalSearchQueue(key);
+  let searchQueue = getSearchQueue(key);
   if (!searchQueue.includes(value)) {
     const updatedSearchQueue = _limitSearchQueue(searchQueue, value, 3);
     localStorage.setItem(key, JSON.stringify(updatedSearchQueue));

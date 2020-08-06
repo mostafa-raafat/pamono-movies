@@ -29,7 +29,7 @@ function App({ hasError, moviesHaveError }) {
 }
 
 App.propTypes = {
-  error: PropTypes.bool.isRequired,
+  hasError: PropTypes.bool.isRequired,
   moviesHaveError: PropTypes.func.isRequired,
 };
 
